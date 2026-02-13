@@ -1,12 +1,25 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+
 import { useTheme } from "../../context/ThemeContext";
+import { language } from "../../data/language";
+import { useSelector } from "react-redux";
 function Navigation() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
+  const [active, setActive] = useState("");
+
+  const baseClass =
+    "px-5 py-2 font-['Inter'] font-medium text-[18px] leading-[28px] tracking-normal text-[#9CA3AF]";
+
+  const activeClass =
+    "rounded-[6px] border border-[#3730A3] text-[#3730A3] bg-[#FFFFFF]";
+
   const badgeStyle =
     theme === "light"
       ? "bg-[#EEEBFF] text-[#7B61FF]"
       : "bg-[#4731D3] text-[#8F88FF]";
+
+  const lang = useSelector((state) => state.language.lang);
+  const t = language[lang];
 
   return (
     <header className="w-full">
@@ -22,33 +35,34 @@ function Navigation() {
           </div>
         </div>
         <nav className="flex items-center gap-10">
-          <NavLink
-            exact
-            to="/"
-            activeClassName=" rounded-[6px] border border-[#3730A3]
-                     text-[#3730A3] bg-[#FFFFFF] "
-            className="px-5 py-2 font-['Inter'] font-medium text-[18px] leading-[28px] tracking-normal text-[#9CA3AF]"
+          <a
+            onClick={() => setActive("skills")}
+            href="#skills"
+            className={`${baseClass} ${
+              active === "skills" ? activeClass : null
+            } `}
           >
-            Skills
-          </NavLink>
+            {t.navigation.skills}
+          </a>
 
-          <NavLink
-            to="/projects"
-            activeClassName=" rounded-[6px] border border-[#3730A3]
-                     text-[#3730A3]  bg-[#FFFFFF]"
-            className="px-5 py-2 font-['Inter'] font-medium text-[18px] leading-[28px] tracking-normal text-[#9CA3AF]"
+          <a
+            onClick={() => setActive("projects")}
+            href="#projects"
+            className={`${baseClass} ${
+              active === "projects" ? activeClass : null
+            } `}
           >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/hire-me"
-            activeClassName=" rounded-[6px] border border-[#3730A3]
-                     text-[#3730A3]  bg-[#FFFFFF]"
-            className=" px-5 py-2 font-['Inter'] font-medium text-[18px] leading-[28px] tracking-normal text-[#9CA3AF]
-                     "
+            {t.navigation.projects}
+          </a>
+          <a
+            onClick={() => setActive("hire-me")}
+            href="#hire-me"
+            className={`${baseClass} ${
+              active === "hire-me" ? activeClass : null
+            } `}
           >
-            Hire me
-          </NavLink>
+            {t.navigation.hireMe}
+          </a>
         </nav>
       </div>
     </header>

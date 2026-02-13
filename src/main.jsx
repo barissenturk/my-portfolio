@@ -3,14 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider } from "./context/ThemeContext";
-import { BrowserRouter } from "react-router-dom";
-
+import { store } from "./store/store.js";
+import { Provider } from "react-redux";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
+    <Provider store={store}>
+      <ThemeProvider>
         <App />
-      </BrowserRouter>
-    </ThemeProvider>
+      </ThemeProvider>
+    </Provider>
   </StrictMode>,
 );
