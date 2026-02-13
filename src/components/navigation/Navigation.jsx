@@ -8,10 +8,10 @@ function Navigation() {
   const [active, setActive] = useState("");
 
   const baseClass =
-    "px-5 py-2 font-['Inter'] font-medium text-[18px] leading-[28px] tracking-normal text-[#9CA3AF]";
+    "px-3 md:px-6 py-2 font-inter font-medium text-[12px] md:text-[18px] text-[#9CA3AF]";
 
   const activeClass =
-    "rounded-[6px] border border-[#3730A3] text-[#3730A3] bg-[#FFFFFF]";
+    "rounded-md border border-[#3730A3] text-[#3730A3] bg-[#FFFFFF]";
 
   const badgeStyle =
     theme === "light"
@@ -23,46 +23,30 @@ function Navigation() {
 
   return (
     <header className="w-full">
-      <div className="min-h-[62px]  mx-auto flex items-center justify-between ">
+      <div className="flex items-center justify-between py-3">
         <div className="flex items-center ">
           <div
-            className={`w-[62px] h-[62px] rounded-full flex items-center justify-center
-        font-['Inter'] font-semibold text-[24px] leading-[32px] tracking-normal
+            className={` w-12 h-12 md:w-[62px] md:h-[62px] rounded-full flex items-center justify-center
+        font-['Inter'] font-semibold text-[20px] md:text-[24px] tracking-normal
          rotate-[30deg]
         ${badgeStyle}`}
           >
             B
           </div>
         </div>
-        <nav className="flex items-center gap-10">
-          <a
-            onClick={() => setActive("skills")}
-            href="#skills"
-            className={`${baseClass} ${
-              active === "skills" ? activeClass : null
-            } `}
-          >
-            {t.navigation.skills}
-          </a>
-
-          <a
-            onClick={() => setActive("projects")}
-            href="#projects"
-            className={`${baseClass} ${
-              active === "projects" ? activeClass : null
-            } `}
-          >
-            {t.navigation.projects}
-          </a>
-          <a
-            onClick={() => setActive("hire-me")}
-            href="#hire-me"
-            className={`${baseClass} ${
-              active === "hire-me" ? activeClass : null
-            } `}
-          >
-            {t.navigation.hireMe}
-          </a>
+        <nav className="flex items-center  gap-4  md:gap-12">
+          {Object.keys(t.navigation).map((key) => {
+            return (
+              <a
+                key={key}
+                onClick={() => setActive(key)}
+                href={`#${key}`}
+                className={`${baseClass} ${active === key ? activeClass : null} `}
+              >
+                {t.navigation[key]}
+              </a>
+            );
+          })}
         </nav>
       </div>
     </header>

@@ -14,22 +14,22 @@ function ModeSwitcher() {
   const t = language[lang];
 
   return (
-    <div className="pt-[25px] pb-[25px] flex items-center justify-end  ">
-      <div className=" min-h-[38px] flex items-center justify-end">
+    <div className="py-6 flex  justify-end  ">
+      <div className="  flex items-center justify-end">
         <button
           type="button"
           onClick={toggleTheme}
           className={`relative inline-flex items-center rounded-full
-          w-[55px] h-[24px] p-[2px]
+          w-14 h-6 p-1
           transition-colors duration-300
           ${isDark ? "bg-[#4731D3]" : "bg-[#3A3A3A]"}`}
         >
           {/* KNOB */}
           <span
-            className={`relative rounded-full
-            w-[16px] h-[16px]
+            className={` rounded-full
+             w-4 h-4
             transition-transform duration-300
-            ${isDark ? "translate-x-[30px]" : "translate-x-[5px]"}
+            ${isDark ? "translate-x-8" : "translate-x-1"}
             bg-[#FFE86E]`}
           >
             {/* OFF → kalın hilal */}
@@ -43,43 +43,39 @@ function ModeSwitcher() {
           </span>
         </button>
         <p
-          className={`ml-[9px] font-['Inter'] font-bold text-[15px] leading-[1] tracking-[0.1em]
+          className={`ml-[9px] font-['Inter'] font-bold text-[10px] md:text-[15px] leading-[1] tracking-[0.1em]
     ${!isDark ? "text-[#D9D9D9]" : "text-[#777777]"}`}
         >
           {isDark ? t.modeSwitcher.darkMode : t.modeSwitcher.lightMode}
         </p>
-        <div className="ml-[14px] font-['Inter'] font-bold text-[15px] leading-[1] tracking-[0.1em]  text-[#777777]">
+        <span className="ml-3 font-['Inter'] font-bold text-[10px] md:text-[15px] leading-[1] tracking-[0.1em]  text-[#777777]">
           |
-        </div>
-        <div className="flex items-center text-center ml-[24px]">
+        </span>
+        <div className="flex items-center font-['Inter'] font-bold text-[10px] md:text-[15px] tracking-[0.1em] ml-3  md:ml-6">
           {lang === "en" ? (
             <>
               {/* MAVİ & CLICKABLE */}
               <button
                 onClick={() => dispatch(setLanguage("tr"))}
-                className="font-['Inter'] font-bold text-[15px] tracking-[0.1em]
-                     text-[#4731D3] cursor-pointer hover:opacity-80"
+                className={`
+                     cursor-pointer hover:opacity-80 ${isDark ? " text-[#4731D3]" : " text-[#B7AAFF]"}`}
               >
                 {t.modeSwitcher.turkish}
               </button>
 
               {/* GRİ & CLICK YOK */}
-              <span className="font-['Inter'] font-bold text-[15px] tracking-[0.1em] text-[#777777]">
-                {t.modeSwitcher.switchTo}
-              </span>
+              <span className=" text-[#777777]">{t.modeSwitcher.switchTo}</span>
             </>
           ) : (
             <>
               {/* GRİ & CLICK YOK */}
-              <span className="font-['Inter'] font-bold text-[15px] tracking-[0.1em] text-[#777777]">
-                {t.modeSwitcher.switchTo}
-              </span>
+              <span className=" text-[#777777]">{t.modeSwitcher.switchTo}</span>
 
               {/* MAVİ & CLICKABLE */}
               <button
                 onClick={() => dispatch(setLanguage("en"))}
-                className="font-['Inter'] font-bold text-[15px] tracking-[0.1em] ml-[6px]
-                     text-[#4731D3] cursor-pointer hover:opacity-80"
+                className={` ml-[6px]
+                     cursor-pointer hover:opacity-80 ${isDark ? " text-[#4731D3]" : " text-[#B7AAFF]"}`}
               >
                 {t.modeSwitcher.english}
               </button>

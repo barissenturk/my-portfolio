@@ -20,13 +20,88 @@ export const language = {
         "Merhaba, ben Barış — güçlü ve ölçeklenebilir frontend ürünler geliştirmeye tutkulu bir full-stack geliştiriciyim. Fikirleri etkili dijital çözümlere dönüştüren birini arıyorsanız, iletişime geçelim.",
     },
 
-    skills: {
-      js: "Modern web uygulamalarının temelini oluşturan JavaScript ile etkileşimli, performanslı ve ölçeklenebilir çözümler geliştiriyorum. Temiz kod prensipleri ve modüler yapı benim için önceliklidir.",
-      react:
-        "React ile kullanıcı odaklı, yeniden kullanılabilir ve sürdürülebilir arayüzler geliştiriyorum. State yönetimi, performans optimizasyonu ve bileşen mimarisi konularında deneyimliyim.",
-      nodeJs:
-        "Node.js ile güvenilir ve ölçeklenebilir backend servisleri oluşturuyorum. RESTful API tasarımı, veri yönetimi ve performans odaklı mimari geliştirme konusunda tecrübeliyim.",
+    skills: [
+      {
+        id: "js",
+        title: "Java Script",
+        description:
+          "Modern web uygulamalarının temelini oluşturan JavaScript ile etkileşimli, performanslı ve ölçeklenebilir çözümler geliştiriyorum. Temiz kod prensipleri ve modüler yapı benim için önceliklidir.",
+      },
+      {
+        id: "react",
+        title: "React.Js",
+        description:
+          "React ile kullanıcı odaklı, yeniden kullanılabilir ve sürdürülebilir arayüzler geliştiriyorum. State yönetimi, performans optimizasyonu ve bileşen mimarisi konularında deneyimliyim.",
+      },
+      {
+        id: "nodeJs",
+        title: "Node.Js",
+        description:
+          "Node.js ile güvenilir ve ölçeklenebilir backend servisleri oluşturuyorum. RESTful API tasarımı, veri yönetimi ve performans odaklı mimari geliştirme konusunda tecrübeliyim.",
+      },
+    ],
+
+    personal: [
+      {
+        id: "birthDate",
+        label: "Doğum Tarihi",
+        value: "08.02.1996",
+      },
+      {
+        id: "city",
+        label: "İkamet Şehri",
+        value: "İstanbul",
+      },
+      {
+        id: "education",
+        label: "Eğitim Durumu",
+        value: "George Brown College, Computer Programming and Analyst, 2021",
+      },
+      {
+        id: "preferredRole",
+        label: "Tercih Ettiği Rol",
+        value: "Frontend Developer",
+      },
+    ],
+    aboutMe: {
+      firstParagraph:
+        "React, Redux ve Node.js teknolojileriyle ölçeklenebilir ve kullanıcı odaklı web uygulamaları geliştiren bir Frontend Developer’ım. 2021 yılında Toronto’daki George Brown College’dan Computer Programming and Analyst programından mezun oldum.",
+      secondParagraph:
+        "Teknik yetkinliğimi gerçek dünya deneyimiyle birleştirerek performanslı, sürdürülebilir ve kullanıcı odaklı ürünler geliştirmeyi hedefliyorum.",
     },
+
+    projects: [
+      {
+        id: "workintech",
+        title: "Workintech",
+        image: "workintech",
+        description:
+          "Kullanıcıların çerez tercihlerini seçmesine olanak tanıyan basit, özelleştirilebilir ve minimal bir cookie plugin uygulaması. Vanilla JS, SCSS ve Parcel ile geliştirildi.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/workintech",
+        live: "https://workintech-demo.com",
+      },
+      {
+        id: "randomJokes",
+        title: "Random Jokes",
+        image: "randomJokes",
+        description:
+          "API üzerinden rastgele şakalar çeken, modern arayüze sahip bir uygulama. React ve Axios kullanılarak geliştirildi.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/random-jokes",
+        live: "https://random-jokes-demo.com",
+      },
+      {
+        id: "journey",
+        title: "Journey",
+        image: "journey",
+        description:
+          "Kullanıcı dostu tasarıma sahip, responsive landing page uygulaması. Modern UI prensipleri ve performans odaklı yapı ile geliştirildi.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/journey",
+        live: "https://journey-demo.com",
+      },
+    ],
   },
 
   en: {
@@ -48,12 +123,87 @@ export const language = {
       aboutMe:
         "Hi, I’m Barış — a full-stack developer passionate about building solid, scalable frontend products with exceptional user experiences. If you're looking for someone who turns ideas into impactful digital solutions, let’s connect.",
     },
-    skills: {
-      js: "I leverage JavaScript to build interactive, high-performance, and scalable web applications. I prioritize clean, maintainable code and modular architecture to ensure long-term sustainability and growth.",
-      react:
-        "I develop user-centric, scalable interfaces using React, focusing on performance optimization and reusable component architecture. Experienced in advanced state management and building seamless user experiences.",
-      nodeJs:
-        "I design and develop reliable, scalable backend services with Node.js, specializing in RESTful API architecture, efficient data handling, and performance-driven system design.",
+
+    skills: [
+      {
+        id: "js",
+        title: "Java Script",
+        description:
+          "I leverage JavaScript to build interactive, high-performance, and scalable web applications. I prioritize clean, maintainable code and modular architecture to ensure long-term sustainability and growth.",
+      },
+      {
+        id: "react",
+        title: "React.Js",
+        description:
+          "develop ile kullanıcı odaklı, yeniden kullanılabilir ve sürdürülebilir arayüzler geliştiriyorum. State yönetimi, performans optimizasyonu ve bileşen mimarisi konularında deneyimliyim.",
+      },
+      {
+        id: "nodeJs",
+        title: "Node.Js",
+        description:
+          "Node.js and güvenilir ve ölçeklenebilir backend servisleri oluşturuyorum. RESTful API tasarımı, veri yönetimi ve performans odaklı mimari geliştirme konusunda tecrübeliyim.",
+      },
+    ],
+    personal: [
+      {
+        id: "birthDate",
+        label: "Date of Birth",
+        value: "08.02.1996",
+      },
+      {
+        id: "city",
+        label: "City",
+        value: "Istanbul",
+      },
+      {
+        id: "education",
+        label: "Education",
+        value: "George Brown College, Computer Programming and Analyst, 2021",
+      },
+      {
+        id: "preferredRole",
+        label: "Preferred Role",
+        value: "Frontend Developer",
+      },
+    ],
+    aboutMe: {
+      firstParagraph:
+        "I am a Frontend Developer specializing in building scalable and user-focused web applications using React, Redux, and Node.js. I graduated in 2021 from George Brown College in Toronto with a diploma in Computer Programming and Analyst.",
+
+      secondParagraph:
+        " I aim to combine my technical expertise with real-world experience to build high-performance, sustainable, and user-centered digital products.",
     },
+    projects: [
+      {
+        id: "workintech",
+        title: "Workintech",
+        image: "workintech",
+        description:
+          "A simple, customizable, and minimal cookie plugin that allows users to manage their cookie preferences. Built with modern frontend technologies.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/workintech",
+        live: "https://workintech-demo.com",
+      },
+      {
+        id: "randomJokes",
+        title: "Random Jokes",
+        image: "randomJokes",
+        description:
+          "A modern web application that fetches random jokes from an API. Developed using React and Axios.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/random-jokes",
+        live: "https://random-jokes-demo.com",
+      },
+      {
+        id: "journey",
+        title: "Journey",
+        image: "journey",
+        description:
+          "A responsive landing page application built with modern UI principles and performance-focused architecture.",
+        technologies: ["react", "redux", "axios"],
+        github: "https://github.com/username/journey",
+        live: "https://journey-demo.com",
+      },
+    ],
   },
 };

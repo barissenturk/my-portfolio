@@ -15,34 +15,42 @@ export default function HireMe() {
   const lang = useSelector((state) => state.language.lang);
   const t = language[lang];
 
-  const lightStyle = `flex items-center  pl-[12px] pr-[20px] py-[11px]  ml-[12px] font-['Inter'] font-normal text-[18px] leading-[28px]  border  rounded-[6px]  transition-all duration-300  ${theme === "light" ? " border-[#3730A3] text-[#3730A3] bg-[#FFFFFF]  hover:bg-[#EEEBFF]" : " border-[#E1E1FF] text-[#E1E1FF] bg-[#383838] hover:bg-[#2E2E2E]"}`;
+  const lightStyle = `flex items-center  px-2 md:pl-[12px] md:pr-[20px] py-2.25 md:py-[11px]  ml-[12px] font-['Inter'] font-normal text-[12px] md:text-[18px]  rounded-md border transition-all duration-300  ${theme === "light" ? " border-[#3730A3] text-[#3730A3] bg-[#FFFFFF]  hover:bg-[#EEEBFF]" : " border-[#E1E1FF] text-[#E1E1FF] bg-[#383838] hover:bg-[#2E2E2E]"}`;
 
-  const hireMeStyle = `px-[32px] py-[12px] font-['Inter'] font-normal text-[18px] leading-[28px] tracking-normal  rounded-[6px] ${theme === "light" ? "text-[#FFFFFF] bg-[#3730A3] " : " text-[#000000] bg-[#E1E1FF] "} `;
+  const hireMeStyle = `px-3 py-2  md:px-[32px] md:py-[12px] font-['Inter'] font-normal rounded-md
+              text-[12px] md:text-[18px] leading-[28px] tracking-normal  ${theme === "light" ? "text-[#FFFFFF] bg-[#3730A3] " : " text-[#000000] bg-[#E1E1FF] "} `;
 
   return (
-    <section id="hire-me" className="flex mt-[80px] ">
+    <section
+      id="hireMe"
+      className="flex flex-col lg:flex-row items-center gap-1 mt-12 lg:mt-20 "
+    >
       <div className="flex flex-col">
-        <div className="flex items-center  w-full">
+        <div className="flex items-center gap-1">
           <div
-            className={`w-[102px] h-[1px] bg-[#3730A3] mr-[10px] ${theme === "light" ? "bg-[#4338CA]" : "bg-[#B7AAFF]"}`}
+            className={`w-15 md:w-26 h-px bg-[#3730A3] mr-[10px] ${theme === "light" ? "bg-[#4338CA]" : "bg-[#B7AAFF]"}`}
           ></div>
           <span
-            className={`font-['Inter'] font-medium text-[20px] leading-[28px] ${theme === "light" ? "text-[#4338CA]" : "text-[#B7AAFF]"}`}
+            className={`font-['Inter'] font-medium text-[16px] md:text-[20px] leading-[28px] ${theme === "light" ? "text-[#4338CA]" : "text-[#B7AAFF]"}`}
           >
             Barış Şentürk
           </span>
         </div>
         <h1
-          className={`font-['Inter']  font-bold text-[71px] leading-[72px] text[#1F2937] mt-[40px] ${theme === "light" ? "text[#1F2937]" : "text-[#AEBCCF]"}`}
+          className={`font-['Inter']  font-bold text-[38px] md:text-[56px] lg:text-[71px]
+            leading-tight
+            mt-6 md:mt-10 ${theme === "light" ? "text[#1F2937]" : "text-[#AEBCCF]"}`}
         >
           {t.hero.title}
         </h1>
         <span
-          className={`font-['Inter'] text-[#6B7280] font-normal text-[18px] leading-[28px] mt-[40px] ${theme === "light" ? "text-[#6B7280]" : "text-[#FFFFFF]"}`}
+          className={`font-['Inter'] text-[#6B7280] font-normal  mt-6 md:mt-10
+            text-[12px] md:text-[18px]
+            leading-[180%] ${theme === "light" ? "text-[#6B7280]" : "text-[#FFFFFF]"}`}
         >
           {t.hero.aboutMe}
         </span>
-        <div className="mt-[40px] min-h-[52px] flex ">
+        <div className=" mt-4 md:mt-10 flex items-center ">
           <a
             href="mailto:barissenturk4@gmail.com"
             target="_blank"
@@ -82,8 +90,11 @@ export default function HireMe() {
           </a>
         </div>
       </div>
-      <div className="flex ml-[68px]">
-        <img src={img} className="min-w-[476px] h-[375px] rounded-[18px]" />
+      <div className="flex md:ml-[68px] md:mr-0 my-6 mr-6 items-center ">
+        <img
+          src={img}
+          className="md:min-w-[476px] md:h-[375px] rounded-[18px] shadow-[0px_18px_88px_-4px_rgba(24,39,75,0.14)]"
+        />
       </div>
     </section>
   );
