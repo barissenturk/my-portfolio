@@ -36,7 +36,6 @@ export default function Projects() {
                 src={projectImages[item.image]}
                 className="w-[300px] h-[180px]"
               />
-              {console.log(item.image)}
               <h2
                 className={`font-['Inter'] font-medium text-[22px] md:text-[30px] leading-[28px] font-medium md:my-[18px] ${theme === "light" ? "text-[#4338CA]" : "text-[#B7AAFF]"}`}
               >
@@ -51,6 +50,7 @@ export default function Projects() {
                 {item.technologies.map((tech) => {
                   return (
                     <div
+                      key={tech}
                       className={`
         ${lightStyle}`}
                     >

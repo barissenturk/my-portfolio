@@ -102,6 +102,9 @@ export const language = {
         live: "https://journey-demo.com",
       },
     ],
+    footer: {
+      title: "Bir sonraki ürününüz üzerinde birlikte çalışalım.",
+    },
   },
 
   en: {
@@ -205,5 +208,8 @@ export const language = {
         live: "https://journey-demo.com",
       },
     ],
+    footer: {
+      title: "Let’s work together on your next product.",
+    },
   },
 };

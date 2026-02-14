@@ -6,6 +6,7 @@ import HireMe from "./Pages/HireMe";
 import Skills from "./Pages/Skills";
 import Profile from "./Pages/Profile";
 import Projects from "./Pages/Projects";
+import Footer from "./Pages/Footer";
 function Main() {
   const { theme } = useTheme();
   return (
@@ -27,6 +28,12 @@ function Main() {
         <Skills />
         <Profile />
         <Projects />
+      </div>
+      <div
+        className={` w-full transition-colors duration-300 
+        ${theme === "dark" ? "bg-[#141414]" : "bg-[#F9F9F9]"}`}
+      >
+        <Footer />
       </div>
     </div>
   );
