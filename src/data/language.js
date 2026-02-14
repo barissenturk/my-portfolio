@@ -72,24 +72,24 @@ export const language = {
 
     projects: [
       {
-        id: "workintech",
-        title: "Workintech",
-        image: "workintech",
+        id: "pizza",
+        title: "Pizza Order",
+        image: "pizza",
         description:
-          "Kullanıcıların çerez tercihlerini seçmesine olanak tanıyan basit, özelleştirilebilir ve minimal bir cookie plugin uygulaması. Vanilla JS, SCSS ve Parcel ile geliştirildi.",
-        technologies: ["react", "redux", "axios"],
-        github: "https://github.com/username/workintech",
-        live: "https://workintech-demo.com",
+          "React ve Vite ile geliştirilmiş modern bir pizza sipariş uygulamasıdır. Uygulama mobil uyumlu, performans odaklı ve Vercel üzerinde deploy edilmiştir.",
+        technologies: ["react", "tailwind", "react router"],
+        github: "https://github.com/barissenturk/fsweb-s8-challenge-pizza",
+        live: "https://pizza-woad-nu.vercel.app/",
       },
       {
-        id: "randomJokes",
-        title: "Random Jokes",
-        image: "randomJokes",
+        id: "movie",
+        title: "Movie App",
+        image: "movie",
         description:
-          "API üzerinden rastgele şakalar çeken, modern arayüze sahip bir uygulama. React ve Axios kullanılarak geliştirildi.",
-        technologies: ["react", "redux", "axios"],
-        github: "https://github.com/username/random-jokes",
-        live: "https://random-jokes-demo.com",
+          "React ve Redux kullanılarak geliştirilmiş film uygulamasıdır. Kullanıcılar filmleri listeleyebilir, favorilere ekleyebilir veya çıkarabilir",
+        technologies: ["react", "redux", "tailwind"],
+        github: "https://github.com/barissenturk/s10g2",
+        live: "https://s10g2-hciyxxqcz-barissenturks-projects.vercel.app/",
       },
       {
         id: "journey",
@@ -178,24 +178,24 @@ export const language = {
     },
     projects: [
       {
-        id: "workintech",
-        title: "Workintech",
-        image: "workintech",
+        id: "pizza",
+        title: "Pizza Order",
+        image: "pizza",
         description:
-          "A simple, customizable, and minimal cookie plugin that allows users to manage their cookie preferences. Built with modern frontend technologies.",
-        technologies: ["react", "redux", "axios"],
-        github: "https://github.com/username/workintech",
-        live: "https://workintech-demo.com",
+          "A modern pizza ordering application built with React and Vite. The application is mobile-responsive, performance-focused, and deployed on Vercel.",
+        technologies: ["react", "tailwind css", "react router"],
+        github: "https://github.com/barissenturk/fsweb-s8-challenge-pizza",
+        live: "https://pizza-woad-nu.vercel.app/",
       },
       {
-        id: "randomJokes",
-        title: "Random Jokes",
-        image: "randomJokes",
+        id: "movie",
+        title: "Movie App",
+        image: "movie",
         description:
-          "A modern web application that fetches random jokes from an API. Developed using React and Axios.",
-        technologies: ["react", "redux", "axios"],
-        github: "https://github.com/username/random-jokes",
-        live: "https://random-jokes-demo.com",
+          "A React and Redux-powered movie browsing application where users can view movies, add or remove them from favorites.",
+        technologies: ["react", "redux", "tailwind"],
+        github: "https://github.com/barissenturk/s10g2",
+        live: "https://s10g2-hciyxxqcz-barissenturks-projects.vercel.app/",
       },
       {
         id: "journey",

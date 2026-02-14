@@ -4,8 +4,8 @@ import { useTheme } from "../../context/ThemeContext";
 import { language } from "../../data/language";
 import { useSelector } from "react-redux";
 
-import workintech from "../../assets/img/workintech.png";
-import randomJokes from "../../assets/img/randomJokes.png";
+import pizza from "../../assets/img/pizza.png";
+import movie from "../../assets/img/movie.png";
 import journey from "../../assets/img/Journey.png";
 export default function Projects() {
   const { theme } = useTheme();
@@ -14,8 +14,8 @@ export default function Projects() {
   const t = language[lang];
 
   const projectImages = {
-    workintech,
-    randomJokes,
+    pizza,
+    movie,
     journey,
   };
 
@@ -61,14 +61,14 @@ export default function Projects() {
               </div>
               <div className="flex justify-between">
                 <a
-                  href="https://github.com/username/project"
+                  href={item.github}
                   target="_blank"
                   className={`font-['Inter'] font-medium text-[16px] leading-[16px] tracking-normal  underline  ${theme === "light" ? "text-[#3730A3]" : "text-[#E1E1FF]"}`}
                 >
                   Github
                 </a>
                 <a
-                  href="https://github.com/username/project"
+                  href={item.live}
                   target="_blank"
                   className={`font-['Inter'] font-medium text-[16px] leading-[16px] tracking-normal  underline  ${theme === "light" ? "text-[#3730A3]" : "text-[#E1E1FF]"}`}
                 >
