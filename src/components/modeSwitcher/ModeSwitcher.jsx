@@ -24,7 +24,6 @@ function ModeSwitcher() {
           transition-colors duration-300
           ${isDark ? "bg-[#4731D3]" : "bg-[#3A3A3A]"}`}
         >
-          {/* KNOB */}
           <span
             className={` rounded-full
              w-4 h-4
@@ -32,7 +31,6 @@ function ModeSwitcher() {
             ${isDark ? "translate-x-8" : "translate-x-1"}
             bg-[#FFE86E]`}
           >
-            {/* OFF → kalın hilal */}
             {!isDark && (
               <span
                 className="absolute inset-0 rounded-full
@@ -54,7 +52,6 @@ function ModeSwitcher() {
         <div className="flex items-center font-['Inter'] font-bold text-[10px] md:text-[15px] tracking-[0.1em] ml-3  md:ml-6">
           {lang === "en" ? (
             <>
-              {/* MAVİ & CLICKABLE */}
               <button
                 onClick={() => dispatch(setLanguage("tr"))}
                 className={`
@@ -63,15 +60,12 @@ function ModeSwitcher() {
                 {t.modeSwitcher.turkish}
               </button>
 
-              {/* GRİ & CLICK YOK */}
               <span className=" text-[#777777]">{t.modeSwitcher.switchTo}</span>
             </>
           ) : (
             <>
-              {/* GRİ & CLICK YOK */}
               <span className=" text-[#777777]">{t.modeSwitcher.switchTo}</span>
 
-              {/* MAVİ & CLICKABLE */}
               <button
                 onClick={() => dispatch(setLanguage("en"))}
                 className={` ml-[6px]
